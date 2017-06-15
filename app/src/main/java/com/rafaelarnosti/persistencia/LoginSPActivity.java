@@ -22,7 +22,6 @@ public class LoginSPActivity extends AppCompatActivity {
         etSenha = (EditText)findViewById(R.id.etSenha);
         chkContinuarConectado = (CheckBox)findViewById(R.id.chkContinuarConectado);
         ler();
-
     }
 
     public void logar(View v){
