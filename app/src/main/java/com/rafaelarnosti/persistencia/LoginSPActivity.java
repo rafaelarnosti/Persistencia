@@ -28,9 +28,16 @@ public class LoginSPActivity extends AppCompatActivity {
     public void logar(View v){
         SharedPreferences sp = getPreferences(MODE_PRIVATE);
         SharedPreferences.Editor e = sp.edit();
-        e.putString("usuario",etUser.getText().toString());
-        e.putString("Senha",etSenha.getText().toString());
-        e.putBoolean("manterConectado",chkContinuarConectado.isChecked());
+        if(chkContinuarConectado.isChecked()){
+            e.putString("usuario",etUser.getText().toString());
+            e.putString("Senha",etSenha.getText().toString());
+            e.putBoolean("manterConectado",chkContinuarConectado.isChecked());
+        }
+        else{
+            e.putString("usuario","");
+            e.putString("Senha","");
+            e.putBoolean("manterConectado",false);
+        }
         e.apply();
     }
 
