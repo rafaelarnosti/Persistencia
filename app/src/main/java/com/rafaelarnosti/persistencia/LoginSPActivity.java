@@ -46,6 +46,5 @@ public class LoginSPActivity extends AppCompatActivity {
         etUser.setText(sp.getString("usuario",null));
         etSenha.setText(sp.getString("Senha",null));
         chkContinuarConectado.setChecked(sp.getBoolean("manterConectado",false));
-
     }
 }
